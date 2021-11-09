@@ -13,5 +13,5 @@ def _mutate_date_(stocks):
         stocks[company].rename(columns = {'index':'date'}, inplace = True)
     return stocks
 
-stock_dict2 = _mutate_date_(copy.deepcopy(stock_dict))
-stock_dict2["IBM"].describe(include='all')
+#stock_dict2 = _mutate_date_(copy.deepcopy(stock_dict))
+#stock_dict2["IBM"].describe(include='all')
