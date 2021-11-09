@@ -72,7 +72,7 @@ def date_slicer(stk_frame, stock_dict, stock, start_date, end_date):
     #1. The Stock dictionary updated with the dataframe
     #It also produces a csv file per stock with the data
     try:
-        date_frame = pd.DataFrame(stk_frame["Time Series (Daily)"]).T.sort_index()
+        date_frame = pd.DataFrame(stk_frame["Time Series (Daily)"], dtype = "float").T.sort_index()
     except KeyError:
         raise KeyError("Stock not found. Did you use the correct symbol? Please try again")
     sliced_frame = date_frame.loc[start_date:end_date]
